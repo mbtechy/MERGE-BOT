@@ -1,7 +1,12 @@
 import os
+from os import getenv, environ
+from dotenv import load_dotenv
 
 
-class Config(object):
+
+load_dotenv()
+
+class Var(object):
     API_HASH = os.environ.get("API_HASH" , "92315b2cb9d11132dbb9d12d6fd3c0d4")
     BOT_TOKEN = os.environ.get("BOT_TOKEN" , "6796815952:AAEwoy1MgxYFiwOah8qhL8XHt0KLr2StjG8")
     TELEGRAM_API = os.environ("TELEGRAM_API" , "21993419")
